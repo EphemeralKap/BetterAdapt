@@ -12,7 +12,6 @@ import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Box2DDebugRenderer;
 import com.badlogic.gdx.physics.box2d.World;
 import com.ephemeralkap.adapt.BetterAdapt;
-import com.ephemeralkap.adapt.level.MapLoader;
 import com.ephemeralkap.adapt.managers.EntityManager;
 
 public class GameScreen extends AbstractScreen {
@@ -24,7 +23,6 @@ public class GameScreen extends AbstractScreen {
     private EntityManager entityManager;
     private World world;
     private Box2DDebugRenderer b2dr;
-    private MapLoader mapLoader;
     
     private SpriteBatch batch;
 
@@ -38,7 +36,6 @@ public class GameScreen extends AbstractScreen {
         engine = new Engine();
         world = new World(new Vector2(0, -10), true);
         b2dr = new Box2DDebugRenderer();
-        mapLoader = new MapLoader();
         batch = new SpriteBatch();
         
         entityManager = new EntityManager(engine, batch);
